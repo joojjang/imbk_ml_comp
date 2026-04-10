@@ -106,8 +106,7 @@ Bank Customer Churn Dataset (row: 10000, col:12)
 ### 성능 개선 방안
 
 - 최적 모델에서 제외했던 CatBoost 사용
-- 최적 모델 중 성능이 가장 낮았던 RF 대신 성능 더 높은 모델로 시도
-- 스태킹 후방 모델 변경 또는 cv 조정
+- Stacking 후방 모델 변경 또는 cv 조정
 
 ### 레퍼런스
 
