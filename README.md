@@ -2,7 +2,7 @@
 
 ## Churn(고객 이탈) Classifiaction 인사이트 분석
 
-본 프로젝트는 은행 고객 데이터에서 **고객 이탈(Churn)**에 영향을 미치는 주요 요인을 분석하고, **AutoML**과 **앙상블 기법(Stacking)**을 활용하여 예측 모델의 성능을 극대화하는 것을 목표로 합니다.
+본 프로젝트는 은행 고객 데이터에서 **고객 이탈**에 영향을 미치는 주요 요인을 분석하고, **AutoML**과 **앙상블 기법**(**Stacking**)을 활용하여 예측 모델의 성능을 극대화하는 것을 목표로 합니다.
 
 ### 기간
 
@@ -45,8 +45,10 @@ Bank Customer Churn Dataset (row: 10000, col:12)
 <br />
 
 1. 데이터 전처리 및 EDA 수행
-   1. Label Encoding: 범주형 변수(country, gender) 수치화
-   2. Feature Selection: 상관관계 및 시각화 분석을 통해 핵심 변수(**age, products_number, country, balance**) 선정
+   1. Label Encoding: 범주형 변수(country, gender) 수치화 후 그래프 도출
+   2. Feature Selection:  
+      <img width="1779" height="503" alt="image" src="https://github.com/user-attachments/assets/4c347c14-0965-49da-afd4-f56e36b10d99" />  
+      상관관계 및 시각화 분석을 통해 핵심 변수(**age, products_number, country, balance**) 선정
    3. 인사이트:  
       **독일 거주 고객 및 40~60대 중장년층**의 이탈률이 상대적으로 높음
       **보유 상품 수**가 적을수록 이탈 위험이 큼 → Cross-selling 전략의 유효성 확인
@@ -88,7 +90,7 @@ Bank Customer Churn Dataset (row: 10000, col:12)
 3. 우량 고객 및 독일 집중 마케팅 (balance & country 대응):  
    '독일의 고액 자산가'가 이탈하지 않게 VIP 우대 또는 지역 특화 금융 관리 도입
 
-### 모델 성능
+### 모델 성능 비교
 
 분류 모델용 지표인 F1-score 이용하여 측정
 
@@ -101,7 +103,7 @@ Bank Customer Churn Dataset (row: 10000, col:12)
 | RandomForest       |   `0.4800`   |
 | **Stacking Model** | **`0.5523`** |
 
-### 개선 방안
+### 성능 개선 방안
 
 - 최적 모델에서 제외했던 CatBoost 사용
 - 최적 모델 중 성능이 가장 낮았던 RF 대신 성능 더 높은 모델로 시도
