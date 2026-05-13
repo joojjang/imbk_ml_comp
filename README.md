@@ -13,7 +13,7 @@
 Bank Customer Churn Dataset (row: 10000, col:12)  
 출처: [Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data)
 
-### 라이브러리 리스트
+### 기술 스택  
 
 #### Data Manipulation
 
